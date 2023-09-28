@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./page/Home";
+
 import Layout from "./page/Layout";
 import TradingViewWidget from "./page/RealTimeChart";
 import FR from "./page/FR";
@@ -9,10 +9,6 @@ const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <span>error</span>,
     children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
       {
         path: "/chart",
         element: <TradingViewWidget />,
