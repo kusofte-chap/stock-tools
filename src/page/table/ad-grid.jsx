@@ -1,44 +1,30 @@
-import { useState, useRef, useEffect, useMemo, useCallback } from "react";
+import { useRef, useMemo, useCallback } from "react";
 
-import { AgGridReact } from "ag-grid-react"; // the AG Grid React Component
+import { AgGridReact } from "ag-grid-react";
 
-import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
-import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
-import request from "../../api/request";
+import "ag-grid-community/styles/ag-grid.css";
+import "ag-grid-community/styles/ag-theme-alpine.css";
+
 import { table_data_01 } from "../table.data";
 
 export default function AdGridTable() {
-  const gridRef = useRef(); // Optional - for accessing Grid's API
-  const [rowData, setRowData] = useState(); // Set rowData to Array of Objects, one Object per Row
+  const gridRef = useRef();
 
-  // Each Column Definition results in one Column.
-  const [columnDefs, setColumnDefs] = useState([
+  const columnDefs = [
     { field: "Index" },
     { field: "2022-09-30" },
     { field: "2022-12-31" },
     { field: "2023-03-31" },
     { field: "2023-06-30" },
-  ]);
+  ];
 
-  // DefaultColDef sets props common to all Columns
   const defaultColDef = useMemo(() => ({
     sortable: true,
   }));
 
-  // Example of consuming Grid Event
   const cellClickedListener = useCallback((event) => {
     console.log("cellClicked", event);
   }, []);
-
-  // Example load data from server
-  //   useEffect(() => {
-  //     fetch("https://www.ag-grid.com/example-assets/row-data.json")
-  //       .then((result) => result.json())
-  //       .then((rowData) => setRowData(rowData));
-
-  //     request.get
-
-  //   }, []);
 
   return (
     <div className="ag-theme-alpine" style={{ width: "100%", height: 600 }}>

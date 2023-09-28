@@ -1,6 +1,6 @@
 import { createChart, CrosshairMode } from "lightweight-charts";
 import { useEffect, useRef } from "react";
-import { demo_data_02, demo_data_03, demo_data_04 } from "../data";
+import { demo_data_02, demo_data_04 } from "../data";
 
 export default function TendChart() {
   const chartContainerRef = useRef();

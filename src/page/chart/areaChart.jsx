@@ -1,13 +1,6 @@
 import { createChart } from "lightweight-charts";
 import { useEffect, useRef } from "react";
-import {
-  area_data_0,
-  area_data_1,
-  demo_data_02,
-  demo_data_03,
-  demo_data_04,
-  demo_data_05,
-} from "../data";
+import { area_data_0, area_data_1, demo_data_05 } from "../data";
 
 export default function AreaChart() {
   const chartElement = useRef();

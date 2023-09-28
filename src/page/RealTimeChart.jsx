@@ -1,6 +1,6 @@
 // TradingViewWidget.jsx
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 let tvScriptLoadingPromise;
 
@@ -61,7 +61,7 @@ export default function TradingViewWidget() {
   return (
     <div className="tradingview-widget-container">
       <div id="tradingview_c47c4" style={{ width: "100%", height: "100vh" }} />
-      <div className="tradingview-widget-copyright">
+      {/* <div className="tradingview-widget-copyright">
         <a
           href="https://cn.tradingview.com/"
           rel="noopener nofollow"
@@ -69,7 +69,7 @@ export default function TradingViewWidget() {
         >
           <span className="blue-text">在TradingView上跟踪所有市场</span>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }

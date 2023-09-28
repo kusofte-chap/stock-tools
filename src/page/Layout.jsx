@@ -12,9 +12,9 @@ import {
 import { Link, Outlet, useNavigate } from "react-router-dom";
 
 import AssessmentIcon from "@mui/icons-material/Assessment";
-import TableViewIcon from "@mui/icons-material/TableView";
+// import TableViewIcon from "@mui/icons-material/TableView";
 import WestIcon from "@mui/icons-material/West";
-import ShowChartIcon from "@mui/icons-material/ShowChart";
+// import ShowChartIcon from "@mui/icons-material/ShowChart";
 import CandlestickChartIcon from "@mui/icons-material/CandlestickChart";
 import { useState } from "react";
 
@@ -78,7 +78,7 @@ export default function Layout() {
                 <ListItemText primary="Fiancial Reports" />
               </ListItemButton>
               <Divider />
-              <ListItemButton sx={{ pl: 2 }} onClick={() => ng("/FR")}>
+              {/* <ListItemButton sx={{ pl: 2 }} onClick={() => ng("/FR")}>
                 <ListItemIcon>
                   <TableViewIcon />
                 </ListItemIcon>
@@ -91,7 +91,7 @@ export default function Layout() {
                 </ListItemIcon>
                 <ListItemText primary="TEND" />
               </ListItemButton>
-              <Divider />
+              <Divider /> */}
             </List>
           </Stack>
           <Stack
